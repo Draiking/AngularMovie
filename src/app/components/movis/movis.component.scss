@@ -1,0 +1,51 @@
+img {
+  width: 100px;
+}
+
+.img {
+  margin-right: 15px;
+}
+
+.wrapper-info {
+  flex-direction: column;
+  justify-content: space-between;
+  p{
+    margin: 0;
+  }
+}
+
+.title {
+  padding-bottom: 10px;
+}
+
+.year {
+  padding-bottom: 15px;
+}
+
+.film-info {
+  margin: 20px;
+
+}
+
+.movie {
+  border-bottom: 1px solid gray;
+}
+
+.delete {
+  justify-content: center;
+  align-items: center;
+}
+
+.mb10 {
+  margin-bottom: 10px;
+}
+
+.delete {
+  position: relative;
+  top: 7px;
+  margin-left: 16px;
+}
+
+.pr10 {
+  padding-right: 10px;
+}

@@ -1,0 +1,23 @@
+<div class="wrapper-header">
+    <h1>Список любимых фильмов</h1>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <form class="example-form">
+        <mat-form-field class="example-full-width">
+            <mat-label>Поиск фильма по названию</mat-label>
+            <input type="text" matInput
+                   [(ngModel)]="search"
+                   (ngModelChange)="searchMovie($event)"
+                   name="search"
+                   [matAutocomplete]="auto">
+            <mat-autocomplete (optionSelected)="selected($event)" autoActiveFirstOption #auto="matAutocomplete">
+                <mat-option *ngFor="let option of options" [value]="option">
+                    {{option.Title}}
+                    {{option.Year}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+    </form>
+    </mat-toolbar-row>
+</mat-toolbar>
+</div>

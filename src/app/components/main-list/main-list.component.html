@@ -1,0 +1,6 @@
+<app-header></app-header>
+<ng-container *ngIf="lists">
+  <ng-container *ngFor="let item of lists">
+      <app-movis [item]="item" (eventDelete)="delete($event)" (eventDetail)="detail($event)"></app-movis>
+  </ng-container>
+</ng-container>

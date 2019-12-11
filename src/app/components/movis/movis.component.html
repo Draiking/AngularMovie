@@ -1,0 +1,21 @@
+<div class="movie">
+  <div class="d-flex film-info">
+    <div class="img">
+      <img [src]="item.Poster && item.Poster.length>5 ? item.Poster : './assets/No-Image.png'" [alt]="item.Title">
+    </div>
+    <div class="wrapper-info d-flex">
+      <div class="title d-flex">
+        <p class="pr10">Название:</p>
+        {{item.Title}}
+      </div>
+      <div class="year d-flex">
+        <p class="pr10">год:</p>
+        {{item.Year}}
+      </div>
+      <div class="details-button">
+        <button (click)="detail()" class="mb10" mat-raised-button color="primary">Подробнее</button>
+        <mat-icon (click)="delete()" class="delete" color="warn">delete</mat-icon>
+      </div>
+    </div>
+  </div>
+</div>

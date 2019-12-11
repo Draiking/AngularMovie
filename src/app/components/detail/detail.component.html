@@ -1,0 +1,39 @@
+<ng-container *ngIf="film && film.Poster">
+    <h1 class="mr16">Информация о фильме</h1>
+    <div class="wrapper-detail d-flex">
+        <div class="img">
+            <img [src]="film.Poster && film.Poster.length>5 ? film.Poster : './assets/No-Image.png'" [alt]="film.Title">
+        </div>
+        <div class="wrapper-info-film d-flex">
+            <div class="info">
+                <div class="title d-flex">
+                    <p class="pr15 pb10">Название:</p>
+                    <p>{{film.Title}}</p>
+                </div>
+                <div class="year d-flex">
+                    <p class="pr15 pb10">Год:</p>
+                    <p>{{film.Year}}</p>
+                </div>
+                <div class="relise d-flex">
+                    <p class="pr15 pb10">Премьера:</p>
+                    <p>{{film.Year}}</p>
+                </div>
+                <div class="genre d-flex">
+                    <p class="pr15 pb10">Жанр:</p>
+                    <p>{{film.Genre}}</p>
+                </div>
+                <div class="actors d-flex">
+                    <p class="pr15 pb10">Актеры:</p>
+                    <p>{{film.Actors}}</p>
+                </div>
+                <div class="plot d-flex">
+                    <p class="pr15 pb10">Сюжет:</p>
+                    <p>{{film.Plot}}</p>
+                </div>
+            </div>
+            <div class="button">
+                <button (click)="back()" mat-raised-button color="primary">Вернуться назад</button>
+            </div>
+        </div>
+    </div>
+</ng-container>
