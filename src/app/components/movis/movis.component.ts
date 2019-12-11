@@ -7,7 +7,6 @@ import {MovieInterface} from '../../interface/movie.interface';
     styleUrls: ['./movis.component.scss']
 })
 export class MovisComponent implements OnInit {
-
     @Input() item: MovieInterface;
     @Output() eventDelete = new EventEmitter();
     @Output() eventDetail = new EventEmitter();
